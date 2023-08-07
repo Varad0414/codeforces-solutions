@@ -1,0 +1,23 @@
+import java.util.*;
+
+public class NextRound {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int k = sc.nextInt();
+        int cnt = 0;
+        int minScore = Integer.MAX_VALUE;
+        int arr[] = new int[n+1];
+        for (int i = 1; i <= n; i++) {
+            arr[i] = sc.nextInt();
+            if(i == k)
+                minScore = arr[i];
+        }
+        for (int i = 1; i <= n; i++) {
+            if (arr[i] >= minScore && arr[i] > 0) {
+                cnt++;
+            }
+        }
+        System.out.println(cnt);
+    }
+}
