@@ -1,0 +1,18 @@
+import java.util.*;
+
+public class BearAndBrother {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int lim = sc.nextInt();
+        int bob = sc.nextInt();
+        int cnt = 0;
+
+        while (bob >= lim) {
+            lim *= 3;
+            bob *= 2;
+            cnt++;
+        }
+
+        System.out.println(cnt);
+    }
+}
