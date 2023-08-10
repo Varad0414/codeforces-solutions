@@ -1,0 +1,21 @@
+import java.util.*;
+
+public class SoldierAndBananas {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int k = sc.nextInt(); // Cost of first Banana
+        int n = sc.nextInt(); // Dollars that soldier has
+        int w = sc.nextInt(); // Number of bananas
+
+        int cost = 0;
+        for (int i = 1; i <= w; i++) {
+            cost += k*i;
+        }
+
+        if(cost <= n)
+            System.out.println("0");
+        else 
+            System.out.println(cost - n);
+        
+    }
+}
