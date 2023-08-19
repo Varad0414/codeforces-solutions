@@ -1,0 +1,28 @@
+import java.util.*;
+
+public class FairPlayoff {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int testCases = sc.nextInt();
+        for (int i = 0; i < testCases; i++) {
+            int arr[] = new int[4];
+            for (int j = 0; j < 4; j++) {
+                arr[j] = sc.nextInt();
+            }
+            int winners[] = new int[2];
+            winners[0] = Math.max(arr[0], arr[1]);
+            winners[1] = Math.max(arr[2], arr[3]);
+            
+            Arrays.sort(arr);
+            Arrays.sort(winners);
+
+            if (arr[2] == winners[0] && arr[3] == winners[1]) {
+                System.out.println("YES");
+            }
+            else {
+                System.out.println("NO");
+            }
+
+        }
+    }
+}
